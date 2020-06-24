@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(dogage.Years(6))
+	fmt.Println(dogage.Years(8))
 }
