@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(dog.Years(5))
+	fmt.Println(dog.Years(6))
 }
