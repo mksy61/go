@@ -13,10 +13,9 @@ func main() {
 		fmt.Println("Error:", err)
 		return
 	}
-	nAge, err := strconv.ParseInt(sAge, 10, 32)
-	if err != nil {
+	if nAge, err := strconv.ParseInt(sAge, 10, 32); err != nil {
 		fmt.Println("Error:", err)
-		return
+		//return
 	} else {
 		fmt.Printf("Your age is:%v -->%T", nAge, nAge)
 	}
