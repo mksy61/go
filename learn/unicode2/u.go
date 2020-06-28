@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"strings"
+	"unicode"
 	"unicode/utf8"
 )
 
@@ -16,4 +18,11 @@ func main() {
 	}
 	fmt.Println()
 	fmt.Println(utf8.RuneCountInString(bs))
+	fmt.Println(strings.ToUpper(bs))
+	fmt.Println()
+	r := []rune(bs)
+	for _, v := range r {
+		fmt.Printf(string(unicode.ToUpper(v)))
+	}
+
 }
