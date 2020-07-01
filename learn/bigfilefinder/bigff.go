@@ -43,4 +43,9 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+
+	tempFile, err := ioutil.TempFile("", "aaa")
+
+	fmt.Println(tempFile.Name())
+	defer os.Remove(tempFile.Name())
 }
