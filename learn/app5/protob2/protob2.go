@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"learn/app5/protob2/pb2"
+
+	"google.golang.org/protobuf/proto"
 )
 
 func main() {
@@ -17,10 +19,18 @@ func main() {
 
 	*p1.Id = 1
 	*p1.Age = 5
-	*p1.AnimalType = "At"
+	*p1.AnimalType = "Eşek"
 	*p1.Nickname = "karatay"
 	*p1.Zone = 3
 
 	fmt.Println(p1.GetAge())
+
+	a, _ := proto.Marshal(&p1)
+
+	b := &pb2.Animal{}
+	err := proto.Unmarshal(a, b)
+	fmt.Println(err)
+
+	fmt.Println(b.GetAnimalType())
 
 }
